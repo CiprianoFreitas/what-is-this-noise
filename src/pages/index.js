@@ -7,12 +7,20 @@ const IndexPage = () => (
     <main
       className={css`
         display: grid;
+        grid-gap:1rem;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        margin: 4rem 3rem;
+        max-width: 960px;
+        margin: 4rem auto;
+        font-family: 'Open Sans', sans-serif;
+        @media (max-width: 960px) {
+          margin: 2rem;
+        }
       `}
     >
       <div>
-        <h1>What is this noise?</h1>
+        <h1 className={css`
+          font-family: 'Kaushan Script', cursive;
+        `}>What is this noise?</h1>
         <p>
           As a way to challenge myself creatively I will try to make one song
           per month.

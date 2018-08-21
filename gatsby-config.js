@@ -18,5 +18,14 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Open Sans:400`,
+          `Kaushan Script:400`,
+        ]
+      }
+    },
   ],
 }
