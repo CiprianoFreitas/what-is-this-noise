@@ -14,11 +14,14 @@ const IndexPage = () => (
     <main
       className={css`
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         max-width: 960px;
         margin: 2rem auto;
         font-family: 'Open Sans', sans-serif;
         border: 5px solid #FEFF5F;
+        @media (max-width: 609px) {
+          margin-top: 0;
+        }
       `}
     >
       <div className={css`
