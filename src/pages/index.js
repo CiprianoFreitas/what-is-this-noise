@@ -53,7 +53,7 @@ const IndexPage = () => (
           scrolling="no"
           frameborder="no"
           allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/514831743%3Fsecret_token%3Ds-E4ZJP&color=%2307301f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/589802208%3Fsecret_token%3Ds-mmWBM&color=%2307301f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
         />
       </div>
     </main>
