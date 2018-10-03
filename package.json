@@ -17,7 +17,7 @@
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",
     "react-helmet": "^5.2.0",
-    "serve": "^9.6.0"
+    "serve": "^10.0.2"
   },
   "keywords": [
     "gatsby"
