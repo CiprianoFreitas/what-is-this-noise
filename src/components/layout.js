@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 
-import './layout.css';
+import './layout.css'
 
 const Layout = ({ children, data }) => (
   <StaticQuery
@@ -27,14 +27,16 @@ const Layout = ({ children, data }) => (
         >
           <html lang="en" />
         </Helmet>
-        <div>{children}</div>
+        <div>
+          {children}
+        </div>
       </>
     )}
   />
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

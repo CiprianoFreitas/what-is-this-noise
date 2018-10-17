@@ -1,15 +1,13 @@
-import React from 'react';
-import { css } from 'emotion';
-import Layout from '../components/layout';
-import IGVideo from '../components/IGVideo';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import { css } from 'emotion'
+import Layout from '../components/layout'
 
 const typography = css`
-  color: #feff5f;
+  color: #FEFF5F;
   background-color: #07301e;
   line-break: 1rem;
   padding: 1.3rem;
-`;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -20,26 +18,21 @@ const IndexPage = () => (
         max-width: 960px;
         margin: 2rem auto;
         font-family: 'Open Sans', sans-serif;
-        border: 5px solid #feff5f;
+        border: 5px solid #FEFF5F;
         @media (max-width: 609px) {
           margin-top: 0;
         }
       `}
     >
-      <div
-        className={css`
-          padding: 2rem;
-          background-color: #feff5f;
-          background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238d8d8d' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        `}
-      >
-        <h1
-          className={css`
-            ${typography} font-family: 'Kaushan Script', cursive;
-          `}
-        >
-          What is this noise?
-        </h1>
+      <div className={css`
+        padding:2rem;
+        background-color: #feff5f;
+        background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238d8d8d' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      `}>
+        <h1 className={css`
+          ${typography}
+          font-family: 'Kaushan Script', cursive;
+        `}>What is this noise?</h1>
         <p className={typography}>
           As a way to challenge myself creatively I will try to make one song
           per month.
@@ -49,12 +42,10 @@ const IndexPage = () => (
           song.
         </p>
       </div>
-      <div
-        className={css`
-          padding: 2rem;
-          background-color: #07301e;
-        `}
-      >
+      <div className={css`
+        padding:2rem;
+        background-color:#07301e;
+      `}>
         <iframe
           title="songs"
           width="100%"
@@ -66,55 +57,7 @@ const IndexPage = () => (
         />
       </div>
     </main>
-    <div
-      className={css`
-        padding: 2rem;
-        background-color: #feff5f;
-        background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238d8d8d' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        max-width: 960px;
-        margin: 2rem auto;
-        font-family: 'Open Sans', sans-serif;
-        border: 5px solid #feff5f;
-      `}
-    >
-      <h2
-        className={css`
-          ${typography} font-family: 'Kaushan Script', cursive;
-        `}
-      >
-        Videos
-      </h2>
-      <div
-        className={css`
-          display: grid;
-          grid-gap: 1em;
-          grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-        `}
-      >
-        <StaticQuery
-          query={graphql`
-            query IGVideosQuery {
-              site {
-                siteMetadata {
-                  IGVideos {
-                    poster
-                    url
-                  }
-                }
-              }
-            }
-          `}
-          render={data => (
-            <>
-              {data.site.siteMetadata.IGVideos.map(video => (
-                <IGVideo poster={video.poster} url={video.url} />
-              ))}
-            </>
-          )}
-        />
-      </div>
-    </div>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage
