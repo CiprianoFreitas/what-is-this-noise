@@ -21,5 +21,6 @@ jobs:
       # uses: fastify/github-action-merge-dependabot@79ed7224ebf48f0f9392043db8d37b33696d3332
       uses: fastify/github-action-merge-dependabot@v1.1.1
       with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         # The merge method you would like to use (squash, merge, rebase)
         merge-method: rebase
