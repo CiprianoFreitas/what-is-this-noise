@@ -16,11 +16,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Github Action Merge Dependabot
+    - name: Dependabot Auto Merge
       # You may pin to the exact commit or the version.
-      # uses: fastify/github-action-merge-dependabot@79ed7224ebf48f0f9392043db8d37b33696d3332
-      uses: fastify/github-action-merge-dependabot@v1.1.1
+      # uses: ahmadnassri/action-dependabot-auto-merge@bacda948a54941e442c216f4c1c84240c8f9c04a
+      uses: ahmadnassri/action-dependabot-auto-merge@v2.2.0
       with:
+        # The GitHub token used to merge the pull-request
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        # The merge method you would like to use (squash, merge, rebase)
-        merge-method: rebase
+        # The command to pass to Dependabot as a comment
+
